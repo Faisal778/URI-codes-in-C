@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+   
+       int i,n=1,j,a,k;
+       scanf("%d %d", &a, &k);
+       k=k/a;
+    for(i=1; i<=k; i++)
+        {    for(j=1; j<=a ; j++)
+            { printf("%d",n);
+           
+               n++;
+                if(j==a)
+            {
+                break;
+            }
+                else
+            {
+                   printf(" ");
+            }
+            }
+            printf("\n");
+            
+        }
+    
+    return 0;
+}
