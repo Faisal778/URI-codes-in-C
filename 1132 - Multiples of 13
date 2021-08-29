@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+   
+   int a=0,i,j,k;
+   
+   scanf("%d %d", &i, &j);
+   
+   if(i>j)
+   {
+       for(k=j; k<=i; k++)
+       {
+           if(k%13==0)
+           {
+               continue;
+           }
+           else 
+           {
+               a=a+k;
+           }
+       }
+       printf("%d\n",a);
+   }
+   
+   
+    else if(j>i)
+   {
+       for(k=i; k<=j; k++)
+       {
+           if(k%13==0)
+           {
+               continue;
+           }
+           else 
+           {
+               a=a+k;
+           }
+       }
+       printf("%d\n",a);
+   }
+   
+   
+   
+   
+    return 0;
+}
