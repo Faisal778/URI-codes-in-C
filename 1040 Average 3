@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main()
+{
+    float a,b,c,d,m,x;
+    
+    scanf("%f %f %f %f", &a, &b, &c, &d);
+    
+    a= a*2;
+    b=b*3;
+    c=c*4;
+    d=d*1;
+    
+    m=(a+b+c+d)/10;
+    
+    printf("Media: %.1f\n",m);
+    
+    if(m>=7.0)
+    {
+        printf("Aluno aprovado.\n");
+    }
+    else if(m<5.0)
+    {
+        printf("Aluno reprovado.\n");
+    }
+    else if(m>=5.0 && m<=6.9)
+    {
+        scanf("%f",&x);
+        printf("Aluno em exame.\n");
+        printf("Nota do exame: %.1f\n",x);
+        
+        float j=(x+m)/2;
+        
+        if(j>=5.0)
+        {
+            printf("Aluno aprovado.\n");
+        }
+        else if(j<=4.9)
+        {
+            printf("Aluno reprovado.\n");
+        }
+        
+        printf("Media final: %.1f\n", j);
+        
+    }
+    return 0;
+}
