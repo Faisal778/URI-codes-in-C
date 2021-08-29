@@ -1,0 +1,44 @@
+#include<stdio.h>
+int main()
+{
+
+    float a,now,increase;
+    int p;
+    scanf("%f", &a);
+
+    if(a>=0 && a<=400.00)
+    {
+        now= (a*15/100)+a;
+        p= 15;
+
+    }
+    else if(a>=400.01 && a<=800.00)
+    {
+        now= (a*12/100)+a;
+        p= 12;
+    }
+    else if(a>=800.01 && a<=1200.00)
+    {
+
+        now =(a*10/100)+a;
+        p=10;
+    }
+    else if(a>=1200.01 && a<=2000.00)
+    {
+
+        now = (a*7/100)+a;
+        p=7;
+    }
+    else if(a>2000.00)
+    {
+        now = (a*4/100)+a;
+        p=4;
+    }
+
+    increase = (now -a);
+    printf("Novo salario: %.2f\n", now);
+    printf("Reajuste ganho: %.2f\n",increase);
+    printf("Em percentual: %d %%\n", p);
+
+    return 0;
+}
