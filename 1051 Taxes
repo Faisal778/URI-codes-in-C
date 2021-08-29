@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int
+main ()
+{
+  float a, j,k;
+  scanf ("%f", &a);
+
+
+  if (a >= 0 && a <= 2000)
+    {
+      printf ("Isento\n");
+
+    }
+  else if (a > 2000 && a <= 3000)
+    {
+      a = a - 2000;
+     
+      printf ("R$ %.2f\n", ((a * 8) / 100));
+    }
+
+  else if (a > 3000 && a <= 4500)
+    {
+      a = a - 2000;
+      j = a - 1000;
+      a = a - j;
+
+      a = ((a * 8) / 100);
+      j = ((j * 18) / 100);
+
+      printf ("R$ %.2f\n", a + j);
+    }
+
+  else if (a > 4500)
+    {
+      a = a - 2000;
+      j = a - 1000;
+      k = j - 1500;
+    
+      a = a - j;
+      j = j - k;
+
+      a = ((a * 8) / 100);
+      j = ((j * 18) / 100);
+      k = ((k * 28) / 100);
+     
+      printf ("R$ %.2f\n", a + j + k);
+    }
+  return 0;
+}
