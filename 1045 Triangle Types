@@ -1,0 +1,121 @@
+#include <stdio.h>
+
+int main()
+{
+    double a,b,c,a1,b1,c1;
+    
+    scanf("%lf %lf %lf", &a, &b, &c);
+    
+    
+    if(a==b && b!=c)
+    {
+        if(b>c)
+        {
+            a1=a; b1=a; c1=c;
+        }
+        else
+        {
+            a1=c; b1=a; c1=a;
+        }
+    }
+    
+
+   else if(b==c && c!=a)
+   {
+       if(c>a)
+       {
+           a1=c; b1=b; c1=b;
+       }
+       else
+       {
+           a1=b; b1=b; c1=c;
+       }
+   }
+   
+   else if(a==c && c!=b)
+   {
+       if(c>b)
+       {
+           a1=c; b1=c; c1=b;
+       }
+       else 
+       {
+           a1=b; b1=a; c1=c;
+       }
+   }
+   
+   else if(a==b && b==c)
+        {
+            a1=a; b1=a; c1=a;
+        }
+        
+   else if(a>b && a>c)
+    {
+        if(b>c)
+        {
+            a1=a;
+            b1=b;
+            c1=c;
+            
+        }
+         else 
+            {
+                a1= a; b1=c; c1= b;   
+            }
+    }
+    
+    else if( b>c && b>a)
+    {
+        if(c>a)
+            {
+                a1=b; b1=c; c1=a;
+            }
+         else
+            {
+                a1=b; b1=a; c1=c;
+            }
+    }    
+    else if(c>a && c>b)
+        {
+            if(a>b)
+            {
+                a1=c; b1=a; c1=b;
+            }
+            else
+            {
+                a1=c; b1=b; c1=a;  
+            }
+        }
+    
+    if (a1>= (b1+c1))
+    {
+        printf("NAO FORMA TRIANGULO\n");
+    }
+    else
+    {
+    
+    if((a1*a1) ==( b1*b1) + (c1*c1))
+    {
+        printf("TRIANGULO RETANGULO\n");
+    }
+    if((a1*a1) > (b1*b1) + (c1*c1))
+    {
+        printf("TRIANGULO OBTUSANGULO\n");
+    }
+    if((a1*a1) < (b1*b1) + (c1*c1))
+    {
+        printf("TRIANGULO ACUTANGULO\n");
+    }
+    if(a1==b1 && b1==c1)
+    {
+        printf("TRIANGULO EQUILATERO\n");
+    }
+    if((a1==b1 && b1!=c1) || (a1==c1 && c1!=b1) || (b1==c1 && c1!=a1))
+    {
+        printf("TRIANGULO ISOSCELES\n");
+    }
+    
+    }
+    
+    return 0;
+}
